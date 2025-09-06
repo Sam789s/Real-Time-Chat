@@ -78,7 +78,7 @@
         const statusEl = document.getElementById('connection-status');
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-        // UI Elements
+        
         const welcomeScreen = document.getElementById('welcome-screen');
         const chatScreen = document.getElementById('chat-screen');
         const joinButton = document.getElementById('joinChat');
@@ -87,7 +87,7 @@
         const sendMessageButton = document.getElementById('sendMessage');
         const chatBox = document.getElementById('chat');
 
-        // --- Helper Functions ---
+        
         const setViewportHeight = () => {
             document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
         };
@@ -142,7 +142,7 @@
             welcomeScreen.classList.add('hidden');
             chatScreen.classList.remove('hidden');
 
-            // ✅ FIXED URL (no double slash)
+            
             var socket = new SockJS('https://www.chatbysam.com/chat');
             stompClient = Stomp.over(socket);
             stompClient.debug = null;
@@ -227,3 +227,4 @@
 </script>
 </body>
 </html>
+
